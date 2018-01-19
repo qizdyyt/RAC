@@ -29,9 +29,18 @@
                                     <constraint firstAttribute="width" secondItem="8vr-wB-Rmw" secondAttribute="height" multiplier="15:8" id="LyW-gI-Qfo"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiW-hw-A4w">
+                                <rect key="frame" x="164" y="159.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="NCv-v6-7XT" kind="show" id="Upd-ft-X6h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8vr-wB-Rmw" firstAttribute="top" secondItem="RiW-hw-A4w" secondAttribute="bottom" constant="44" id="QPu-IT-53b"/>
+                            <constraint firstItem="RiW-hw-A4w" firstAttribute="centerX" secondItem="8vr-wB-Rmw" secondAttribute="centerX" id="Vcw-3I-qgv"/>
                             <constraint firstItem="8vr-wB-Rmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vhj-6L-ebk"/>
                             <constraint firstItem="8vr-wB-Rmw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="iye-N2-vCq"/>
                             <constraint firstItem="8vr-wB-Rmw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lsR-Cy-RL4"/>
@@ -43,6 +52,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Sec View Controller-->
+        <scene sceneID="QcI-qf-uuG">
+            <objects>
+                <viewController id="NCv-v6-7XT" customClass="SecViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q9K-7v-k6w"/>
+                        <viewControllerLayoutGuide type="bottom" id="uxL-m1-bkg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jo5-cS-b4U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfq-MG-Qm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="125"/>
         </scene>
     </scenes>
 </document>

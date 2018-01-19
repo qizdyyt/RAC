@@ -81,7 +81,7 @@
     }];
     
     
-    
+    [self dict];
     
 }
 
@@ -129,7 +129,7 @@
 {
     
     // 字典
-    NSDictionary *dict = @{@"account":@"aaa",@"name":@"xmg",@"age":@18};
+    NSDictionary *dict = @{@"account":@"aaa",@"name":@"zzz",@"age":@18};
     
     // 转换成集合
     [dict.rac_sequence.signal subscribeNext:^(RACTuple *x) {
@@ -142,7 +142,11 @@
         // = 右边,放需要解析的元组
         RACTupleUnpack(NSString *key1,NSString *value) = x;
         
-        NSLog(@"%@ %@",key1,value);
+//        NSLog(@"%@ %@",key1,value); // account aaa----name zzz----age 18
+    }];
+    
+    [dict.rac_sequence.signal subscribeNext:^(RACTuple *x) {
+        
     }];
 }
 
@@ -262,6 +266,68 @@
     // 取消订阅信号
     [disposable dispose];
 }
+
+/**** 常见宏 ****/
+- (void) changjianhong {
+    //只要这个对象的这个属性发生改变，就会产生信号
+    [RACObserve(self.view, frame) subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    // 包装元组
+    RACTuple *tuple = RACTuplePack(@1,@2);
+    
+    NSLog(@"%@",tuple[0]);
+    
+    // 监听文本框内容
+    //    [_textField.rac_textSignal subscribeNext:^(id x) {
+    //
+    //        _label.text = x;
+    //    }];
+    
+    // 用来给某个对象的某个属性绑定信号,只要产生信号内容,就会把内容给属性赋值
+    RAC(_btn,titleLabel.text) = _textF.rac_textSignal;
+}
+
+- (void)liftSelector
+{
+    // 当一个界面有多次请求时候,需要保证全部都请求完成,才搭建界面
+    
+    // 请求热销模块
+    RACSignal *hotSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        // 请求数据
+        // AFN
+        NSLog(@"请求数据热销模块");
+        
+        [subscriber sendNext:@"热销模块的数据"];
+        
+        return nil;
+    }];
+    
+    // 请求最新模块
+    RACSignal *newSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        // 请求数据
+        NSLog(@"请求最新模块");
+        
+        [subscriber sendNext:@"最新模块数据"];
+        
+        return nil;
+    }];
+    
+    // 数组:存放信号
+    // 当数组中的所有信号都发送数据的时候,才会执行Selector
+    // 方法的参数:必须跟数组的信号一一对应
+    // 方法的参数;就是每一个信号发送的数据
+    [self rac_liftSelector:@selector(updateUIWithHotData:newData:) withSignalsFromArray:@[hotSignal,newSignal]];
+}
+
+- (void)updateUIWithHotData:(NSString *)hotData newData:(NSString *)newData
+{
+    // 拿到请求的数据
+    NSLog(@"更新UI %@ %@",hotData,newData);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
