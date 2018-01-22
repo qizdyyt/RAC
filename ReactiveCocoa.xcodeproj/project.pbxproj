@@ -19,6 +19,7 @@
 		2EDA093C20049AE20066EED3 /* ReactiveCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA093B20049AE20066EED3 /* ReactiveCocoaTests.m */; };
 		2EDA094720049AE20066EED3 /* ReactiveCocoaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA094620049AE20066EED3 /* ReactiveCocoaUITests.m */; };
 		2EFBC9572011951F00DC4B30 /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFBC9562011951F00DC4B30 /* SecViewController.m */; };
+		2EFBC95A2011C73500DC4B30 /* AdvancedUseOfRAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFBC9592011C73500DC4B30 /* AdvancedUseOfRAC.m */; };
 		77B4E0D0197D5FE582B09B1E /* Pods_ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518AD383E91D7E229D65F509 /* Pods_ReactiveCocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		2EDA09542004AC320066EED3 /* GlobeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobeHeader.h; sourceTree = "<group>"; };
 		2EFBC9552011951F00DC4B30 /* SecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
 		2EFBC9562011951F00DC4B30 /* SecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
+		2EFBC9582011C73500DC4B30 /* AdvancedUseOfRAC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedUseOfRAC.h; sourceTree = "<group>"; };
+		2EFBC9592011C73500DC4B30 /* AdvancedUseOfRAC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedUseOfRAC.m; sourceTree = "<group>"; };
 		518AD383E91D7E229D65F509 /* Pods_ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4D1636F5B7D1D26AC7A916 /* Pods-ReactiveCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.debug.xcconfig"; sourceTree = "<group>"; };
 		F23585AE0BF55F7F6ABC97EA /* Pods-ReactiveCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 			children = (
 				2EDA092220049AE20066EED3 /* AppDelegate.h */,
 				2EDA092320049AE20066EED3 /* AppDelegate.m */,
+				2EFBC9582011C73500DC4B30 /* AdvancedUseOfRAC.h */,
+				2EFBC9592011C73500DC4B30 /* AdvancedUseOfRAC.m */,
 				2EDA092520049AE20066EED3 /* ViewController.h */,
 				2EDA092620049AE20066EED3 /* ViewController.m */,
 				2EFBC9552011951F00DC4B30 /* SecViewController.h */,
@@ -384,6 +389,7 @@
 				2EDA092720049AE20066EED3 /* ViewController.m in Sources */,
 				2EDA093220049AE20066EED3 /* main.m in Sources */,
 				2E2F22502007497000DE254F /* RedView.m in Sources */,
+				2EFBC95A2011C73500DC4B30 /* AdvancedUseOfRAC.m in Sources */,
 				2EDA092420049AE20066EED3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

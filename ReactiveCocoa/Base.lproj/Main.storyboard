@@ -36,6 +36,13 @@
                                     <segue destination="NCv-v6-7XT" kind="show" id="Upd-ft-X6h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49H-DX-pDB">
+                                <rect key="frame" x="164" y="477.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="31n-pG-x96" kind="show" id="fQh-jf-EIT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -44,6 +51,8 @@
                             <constraint firstItem="8vr-wB-Rmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vhj-6L-ebk"/>
                             <constraint firstItem="8vr-wB-Rmw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="iye-N2-vCq"/>
                             <constraint firstItem="8vr-wB-Rmw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lsR-Cy-RL4"/>
+                            <constraint firstItem="49H-DX-pDB" firstAttribute="top" secondItem="8vr-wB-Rmw" secondAttribute="bottom" constant="44" id="qYG-p4-YUH"/>
+                            <constraint firstItem="49H-DX-pDB" firstAttribute="centerX" secondItem="8vr-wB-Rmw" secondAttribute="centerX" id="u2N-41-cQG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,6 +61,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Advanced Use OfRAC-->
+        <scene sceneID="vAg-G8-kcS">
+            <objects>
+                <viewController id="31n-pG-x96" customClass="AdvancedUseOfRAC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NDj-b2-xuh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tzw-CP-nqy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lz0-Nd-46m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4h-ur-tmc">
+                                <rect key="frame" x="139" y="118" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Zg-oD-KH5">
+                                <rect key="frame" x="139" y="222" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-qc-G6y">
+                                <rect key="frame" x="164" y="331" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountFiled" destination="d4h-ur-tmc" id="3sw-WW-72V"/>
+                        <outlet property="loginBtn" destination="bBm-qc-G6y" id="GR3-sY-lOL"/>
+                        <outlet property="pwdField" destination="8Zg-oD-KH5" id="Uin-nt-pp2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4R-iy-bAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="817"/>
         </scene>
         <!--Sec View Controller-->
         <scene sceneID="QcI-qf-uuG">
@@ -69,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfq-MG-Qm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="125"/>
+            <point key="canvasLocation" x="1452" y="34"/>
         </scene>
     </scenes>
 </document>
